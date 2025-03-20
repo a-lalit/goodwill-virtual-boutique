@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           isLoaded ? 'scale-100 blur-0' : 'scale-[1.05] blur-md'
         }`}
         style={{ 
-          backgroundImage: `url('https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')` 
+          backgroundImage: `url('https://images.unsplash.com/photo-1558227791-82ad37509149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')` 
         }}
       ></div>
       
@@ -36,25 +36,25 @@ const Hero: React.FC = () => {
               isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            <span className="inline-block text-sm font-medium uppercase tracking-wider mb-6 bg-white/90 px-3 py-1 rounded-full">Summer Collection 2023</span>
+            <span className="inline-block text-sm font-medium uppercase tracking-wider mb-6 bg-white/90 px-3 py-1 rounded-full text-primary">Festival Collection 2023</span>
             <h1 className="font-display text-5xl md:text-7xl font-medium leading-tight tracking-tight text-white drop-shadow-sm mb-6">
-              Curated Styles for Modern Living
+              Traditional Elegance for Modern India
             </h1>
             <p className="text-white/90 text-lg mb-8 max-w-md leading-relaxed">
-              Discover our carefully selected pieces designed to elevate your everyday wardrobe with timeless elegance.
+              Discover our carefully handcrafted pieces that blend time-honored Indian craftsmanship with contemporary designs to create the perfect wardrobe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/collection" 
-                className="inline-flex items-center justify-center bg-white text-black px-8 py-3 rounded-full font-medium transition-all hover:bg-black hover:text-white button-transition"
+                className="inline-flex items-center justify-center bg-india-saffron text-black px-8 py-3 rounded-full font-medium transition-all hover:bg-black hover:text-white button-transition"
               >
-                Shop Collection
+                Explore Collection
               </Link>
               <Link 
                 to="/about" 
                 className="inline-flex items-center justify-center bg-transparent text-white border border-white px-8 py-3 rounded-full font-medium transition-all hover:bg-white hover:text-black button-transition"
               >
-                Our Story <ArrowRight size={16} className="ml-2" />
+                Our Heritage <ArrowRight size={16} className="ml-2" />
               </Link>
             </div>
           </div>
@@ -67,6 +67,9 @@ const Hero: React.FC = () => {
           <div className="w-1 h-2 bg-white/50 rounded-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]"></div>
         </div>
       </div>
+      
+      {/* Decorative element */}
+      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-r from-india-saffron via-white to-india-green opacity-40"></div>
     </section>
   );
 };

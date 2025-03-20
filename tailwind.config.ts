@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter var', 'sans-serif'],
-				display: ['SF Pro Display', 'Inter var', 'sans-serif'],
+				sans: ['Poppins', 'Inter var', 'sans-serif'],
+				display: ['Poppins', 'SF Pro Display', 'Inter var', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -66,6 +66,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				india: {
+					saffron: '#FF9933',
+					white: '#FFFFFF',
+					green: '#138808',
+					navy: '#000080',
+					red: '#B8001F',
+					maroon: '#800000',
+					gold: '#FFD700',
 				}
 			},
 			borderRadius: {

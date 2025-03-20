@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, IndianRupee } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface FeaturedItem {
@@ -14,31 +14,31 @@ interface FeaturedItem {
 const featuredItems: FeaturedItem[] = [
   {
     id: 'item1',
-    title: 'Minimalist Wool Coat',
-    price: '$189.00',
-    imageUrl: 'https://images.unsplash.com/photo-1548624313-0396c75d8be1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-    category: 'Outerwear'
+    title: 'Handloom Pashmina Shawl',
+    price: '₹14,999',
+    imageUrl: 'https://images.unsplash.com/photo-1599032909756-5deb82fea3b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+    category: 'Shawls'
   },
   {
     id: 'item2',
-    title: 'Classic Linen Shirt',
-    price: '$79.00',
-    imageUrl: 'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1051&q=80',
-    category: 'Tops'
+    title: 'Handcrafted Silk Kurta',
+    price: '₹5,999',
+    imageUrl: 'https://images.unsplash.com/photo-1610189020782-9eef96e99c53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1051&q=80',
+    category: 'Kurtas'
   },
   {
     id: 'item3',
-    title: 'Tapered Cotton Trousers',
-    price: '$95.00',
-    imageUrl: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80',
-    category: 'Bottoms'
+    title: 'Block Print Cotton Saree',
+    price: '₹7,499',
+    imageUrl: 'https://images.unsplash.com/photo-1628694647734-bf0ede3f6f33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80',
+    category: 'Sarees'
   },
   {
     id: 'item4',
-    title: 'Merino Wool Sweater',
-    price: '$125.00',
+    title: 'Embroidered Nehru Jacket',
+    price: '₹9,999',
     imageUrl: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1011&q=80',
-    category: 'Knitwear'
+    category: 'Jackets'
   }
 ];
 
@@ -55,12 +55,12 @@ const FeaturedCollection: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span className="inline-block text-sm font-medium uppercase tracking-wider mb-3 text-gray-500">Featured Collection</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium tracking-tight">Timeless Essentials</h2>
+            <span className="inline-block text-sm font-medium uppercase tracking-wider mb-3 text-primary">Premium Collection</span>
+            <h2 className="text-3xl md:text-4xl font-display font-medium tracking-tight">Handcrafted Treasures</h2>
           </div>
           <Link 
             to="/collection" 
-            className="inline-flex items-center text-sm font-medium mt-4 md:mt-0 hover:text-gray-600 transition-colors"
+            className="inline-flex items-center text-sm font-medium mt-4 md:mt-0 hover:text-primary transition-colors"
           >
             View All <ArrowRight size={16} className="ml-2" />
           </Link>
@@ -75,7 +75,7 @@ const FeaturedCollection: React.FC = () => {
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <div className="image-container rounded-xl mb-4 aspect-[3/4] overflow-hidden bg-gray-100">
+              <div className="image-container rounded-xl mb-4 aspect-[3/4] overflow-hidden bg-gray-100 border-2 border-transparent hover:border-secondary/30 transition-colors">
                 <img 
                   src={item.imageUrl} 
                   alt={item.title}
@@ -89,10 +89,12 @@ const FeaturedCollection: React.FC = () => {
               
               <div className="flex items-start justify-between mt-2">
                 <div>
-                  <span className="block text-xs font-medium uppercase tracking-wider text-gray-500 mb-1">{item.category}</span>
+                  <span className="block text-xs font-medium uppercase tracking-wider text-primary mb-1">{item.category}</span>
                   <h3 className="text-base font-medium">{item.title}</h3>
                 </div>
-                <span className="font-medium">{item.price}</span>
+                <span className="font-medium flex items-center">
+                  {item.price}
+                </span>
               </div>
               
               <div className={`transform transition-all duration-300 ease-out mt-3 ${
@@ -104,6 +106,9 @@ const FeaturedCollection: React.FC = () => {
           ))}
         </div>
       </div>
+      
+      {/* Decorative mandala divider */}
+      <div className="mandala-divider mt-16"></div>
     </section>
   );
 };

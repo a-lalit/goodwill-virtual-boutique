@@ -5,6 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -17,24 +18,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 240 5.9% 10%;
+    --primary: 350 78% 40%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 28 78% 52%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 4.8% 95.9%;
+    --muted: 25 20% 95%;
     --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 135 40% 45%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 15 15% 90%;
+    --input: 15 15% 90%;
+    --ring: 350 78% 40%;
 
     --radius: 0.75rem;
   }
@@ -49,16 +50,16 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 350 70% 47%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 30 70% 55%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 135 40% 45%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -66,7 +67,7 @@
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --ring: 350 70% 47%;
   }
 }
 
@@ -131,6 +132,23 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  .indian-pattern {
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23dc2626' fill-opacity='0.08' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .indian-border {
+    @apply border-2 border-secondary/70 rounded-lg p-5;
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    --tw-gradient-from: rgb(254 215 170 / 0.2);
+    --tw-gradient-to: rgb(209 213 219 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  
+  .indian-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-primary;
+  }
 }
 
 .page-transition-enter {
@@ -163,4 +181,16 @@
 .image-loaded {
   filter: blur(0);
   transform: scale(1);
+}
+
+/* Indian-inspired decorative elements */
+.paisley-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23be123c' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.mandala-divider {
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 25'%3E%3Cpath fill='none' stroke='%23be123c' stroke-width='1' d='M0,12.5h100 M25,0v25 M75,0v25 M50,0v25'/%3E%3Ccircle cx='50' cy='12.5' r='8' fill='none' stroke='%23be123c' stroke-width='1'/%3E%3Ccircle cx='50' cy='12.5' r='4' fill='none' stroke='%23be123c' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  margin: 20px 0;
 }

@@ -14,21 +14,21 @@ const categories: Category[] = [
   {
     id: 'women',
     title: 'Women',
-    description: 'Elegant essentials for every occasion',
-    imageUrl: 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80',
+    description: 'Exquisite sarees, salwar suits & fusion wear',
+    imageUrl: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80',
     link: '/collection?category=women'
   },
   {
     id: 'men',
     title: 'Men',
-    description: 'Contemporary classics for the modern man',
-    imageUrl: 'https://images.unsplash.com/photo-1516826957135-700dedea698c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+    description: 'Elegant kurtas, sherwanis & ethnic jackets',
+    imageUrl: 'https://images.unsplash.com/photo-1604690652621-3f5c1132a0cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
     link: '/collection?category=men'
   },
   {
     id: 'accessories',
-    title: 'Accessories',
-    description: 'Finishing touches for your everyday look',
+    title: 'Jewellery',
+    description: 'Traditional & contemporary Indian jewellery',
     imageUrl: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80',
     link: '/collection?category=accessories'
   }
@@ -42,11 +42,11 @@ const CategorySection: React.FC = () => {
   };
 
   return (
-    <section className="section-spacing bg-gray-50">
+    <section className="section-spacing indian-pattern">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <span className="inline-block text-sm font-medium uppercase tracking-wider mb-3 text-gray-500">Browse Categories</span>
-          <h2 className="text-3xl md:text-4xl font-display font-medium tracking-tight">Find Your Style</h2>
+          <span className="inline-block text-sm font-medium uppercase tracking-wider mb-3 text-primary">Browse Categories</span>
+          <h2 className="text-3xl md:text-4xl font-display font-medium tracking-tight">Discover Our Collections</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
@@ -54,7 +54,7 @@ const CategorySection: React.FC = () => {
             <Link 
               key={category.id}
               to={category.link}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-300 indian-border"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img 

@@ -17,10 +17,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col paisley-pattern">
+      <div className="w-full bg-india-saffron h-1"></div>
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer />
+      <div className="w-full bg-india-green h-1"></div>
     </div>
   );
 };
